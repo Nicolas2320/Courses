@@ -1,0 +1,27 @@
+---
+title: "ggplot_hook"
+author: "Nicolas"
+date: "28 de julio de 2021"
+output: pdf_document
+---
+
+## Setting up my environment
+Notes: Adding code chunks to R Markdown notebooks:
+
+```{r loading packages, include=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+
+View(penguins)
+
+```
+
+```{r ggplot for penguin data visualization, echo=FALSE}
+
+ggplot(data = penguins) +
+
+  geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g))
+
+```
